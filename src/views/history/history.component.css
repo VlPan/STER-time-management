@@ -1,0 +1,20 @@
+.history-container {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 50px;
+}
+
+.history__day-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #25db9e;
+  margin-bottom: 5px;
+}
+
+
+.history__day-activities {
+  margin-bottom: 6px;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #25db9e;
+  width: 400px;
+}

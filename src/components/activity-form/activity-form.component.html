@@ -1,0 +1,22 @@
+<form (ngSubmit)="onSubmit()" #activityForm="ngForm">
+
+  <h3 class="first">Add Activity</h3>
+
+  <div class="ui-inputgroup">
+    <input type="text" pInputText id="name" name="name" required [(ngModel)]="model.name" placeholder="Name">
+  </div>
+
+  <div class="ui-inputgroup">
+    <input type="text" pInputText id="frequency" name="frequency"  [(ngModel)]="model.frequency"
+      placeholder="Frequency">
+  </div>
+
+  <div class="ui-inputgroup">
+    <input type="text" pInputText id="importancy" name="importancy"  [(ngModel)]="model.importancy"
+      placeholder="Importancy">
+  </div>
+
+  <button pButton type="button" label="Add Activity" class="ui-button-success" type="submit" [disabled]="!activityForm.form.valid">
+  </button>
+
+</form>

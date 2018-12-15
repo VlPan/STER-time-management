@@ -1,0 +1,12 @@
+.app-navigation {
+  margin-top: 10px;
+}
+
+.app-navigation__link--active {
+  color: #2b9656;
+}
+
+.app-navigation__link {
+  margin: 20px;
+  font-size: 20px;
+}

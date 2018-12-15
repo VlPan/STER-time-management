@@ -1,0 +1,11 @@
+<div class="activity-set">
+  <div *ngFor="let activity of activities">
+    <div class="activity-set__row-container">
+      <app-activity-row
+        (click)="clickOnActivityRow(activity)"
+        [activity]="activity"
+      ></app-activity-row>
+    </div>
+  </div>
+</div>
+

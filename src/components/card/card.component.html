@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card__title" [ngStyle]="{'color': activity.color}">{{activity.name}}</div>
+
+  <div class="card__desc">
+    <div class="card__frequency"></div>
+    <div class="card__importancy"></div>
+    <div class="card__frequency"></div>
+  </div>
+  <div class="card__footer">
+      <div class="delete-btn" (click)="deleteCard()">  <i class="pi pi-trash"></i> </div>
+      <div class="edit-btn" (click)="deleteCard()">  <i class="pi pi-pencil"></i> </div>
+  </div>
+  <ng-content> </ng-content>
+</div>

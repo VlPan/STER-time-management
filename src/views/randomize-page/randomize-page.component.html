@@ -1,0 +1,28 @@
+<div class="randomize-page">
+
+  <button class="randomize-page__btn" (click)="getRandomActivity()">Get Activity</button>
+
+  <div  class="randomize-page__container" *ngIf="!!activity">
+      <app-card
+        [activity]="activity"
+        (deleted)="deleteActivity(activity.id)"
+      > </app-card>
+
+      <button class="randomize-page__btn" (click)="startTimer()">{{ts.startText}}</button>
+
+      <button class="randomize-page__btn" (click)="finalizeActivity()" *ngIf="mins > 3 || hours > 1"
+      style="margin-top: 20px; background-color: #f4d942">End</button>
+
+      <div class="randomize-page__timer">
+          {{format(ts.hours)}} :  {{format(ts.mins)}}  : {{format(ts.secs)}}
+      </div>
+  </div>
+
+  <div class="randomize-page__as-container">
+    <app-activity-set
+      (clicked)="chooseActivity($event)"
+      [activities]="activities"
+    > </app-activity-set>
+  </div>
+
+</div>

@@ -1,0 +1,12 @@
+
+<div class="history-container">
+    <div *ngFor="let day of days; let index">
+        <div class="history__day-title">{{day}}: </div>
+        <div class="history__day-activities">
+          <div *ngFor="let activity of uiHistory[day]">
+              <h3>{{activity.name}} - <span>{{format(activity.hours)}} : {{format(activity.minutes)}} : {{format(activity.seconds)}}</span></h3>
+          </div>
+        </div>
+    </div>
+</div>
+

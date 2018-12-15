@@ -1,0 +1,12 @@
+<div class="activities__add-activity-form">
+  <app-activity-form (modelSubmitted)="addNewModel($event)">
+
+  </app-activity-form>
+</div>
+
+
+<div class="activities__card-container">
+  <div *ngFor="let activity of activities">
+    <app-card (deleted)="deleteActivity(activity.id)" [activity]="activity"></app-card>
+  </div>
+</div>

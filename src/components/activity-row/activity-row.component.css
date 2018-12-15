@@ -1,0 +1,14 @@
+.activity-row {
+  width: 200px;
+  background-color: #89d2ff;
+  border-radius: 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.activity-row__flex-container  {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  padding: 10px;
+}

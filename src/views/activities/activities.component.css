@@ -1,0 +1,11 @@
+.activities__add-activity-form {
+  width: 400px;
+  padding: 40px;
+
+}
+
+.activities__card-container {
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}

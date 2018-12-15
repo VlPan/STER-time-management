@@ -1,0 +1,39 @@
+.randomize-page {
+  width: 80%;
+  margin-left: 10%;
+  height: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.randomize-page__container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.randomize-page__as-container {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 10px;
+  border: 3px solid rgba(137, 190, 255, .7);
+}
+.randomize-page__btn {
+  outline: none;
+  font-size: 50px;
+  border: 25px;
+  color: whitesmoke;
+  background: #c12830;
+  padding: 10px 25px;
+
+  cursor: pointer;
+  width: 400px;
+}
+
+.randomize-page__timer {
+  margin-top: 30px;
+  font-size: 45px;
+}

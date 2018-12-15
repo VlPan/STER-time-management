@@ -1,0 +1,16 @@
+<div class="app-navigation">
+    <nav>
+        <a
+        *ngFor="let link of links"
+        routerLinkActive="app-navigation__link--active"
+        class="link app-navigation__link"
+        routerLink="{{link.value}}"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >
+        {{link.name}}
+      </a>
+        <!-- <a [routerLink]="link" >Random</a>
+        <a [routerLink]="link" routerLinkActive="app-navigation__link--active" class="app-navigation__link">Activities</a>
+        <a [routerLink]="link" routerLinkActive="app-navigation__link--active" class="app-navigation__link">History</a> -->
+    </nav>
+</div>
