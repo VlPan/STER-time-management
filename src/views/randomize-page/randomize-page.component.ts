@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, Renderer, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { Activity, History } from './../../models/activity';
 import { ActivityService } from './../../services/activity.service';
 import { Formatter } from 'src/helpers/formatter';
@@ -11,15 +11,24 @@ import { HistoryService } from './../../services/history.service';
   templateUrl: './randomize-page.component.html',
   styleUrls: ['./randomize-page.component.css']
 })
-export class RandomizePageComponent implements OnDestroy, OnInit {
+export class RandomizePageComponent implements OnDestroy, OnInit, AfterViewInit {
 
-  constructor(private as: ActivityService, private ts: TimerService, private ra: RunningActivityService, private hs: HistoryService) { }
+  constructor(private as: ActivityService, private ts: TimerService, private ra: RunningActivityService, private hs: HistoryService,
+      private renderer: Renderer
+    ) { }
+
+
   activity: Activity;
   activities: Activity[];
+  @ViewChild('email') email: ElementRef;
 
   ngOnInit(): void {
     this.activities = this.as.getActivities();
     this.activity = this.ra.getCurrentActivity();
+  }
+
+  ngAfterViewInit(): void {
+    this.renderer.setElementAttribute(this.email.nativeElement, 'placeholder', 'Enter your email');
   }
   getRandomActivity() {
     this.ra.setCurrentActivity(this.as.getRandomActivity());
